@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 app.use(cors({
-  origin:[ 'http://localhost:3000', 'http://localhost:3001'], 
+  origin:[ 'https://admin.bluephant.tech', 'https://bluephant.tech'], 
   credentials: true
 }));
 app.use(express.json());
