@@ -31,18 +31,6 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '..', 'Frontend', 'dist')));
-
-    app.get(/.*/, (req, res) => {
-        res.sendFile(path.resolve(__dirname, '..', 'Frontend', 'dist', 'index.html'));
-    });
-}
-
-
-
-
-
 app.use('/api',submitRoute)
 app.use('/api/user',UserRoute)
 app.use('/api/order',orderroute)
